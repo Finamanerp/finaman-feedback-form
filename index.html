@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>FEEDBACK FORM</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finaman ERP Demo Feedback</title>
+</head>
+
+<body>
+
+<div class="form-wrapper">
+
+  <!-- Header -->
+  <div class="form-header">
+    <img src="https://via.placeholder.com/180x60?text=Finaman+ERP" alt="Finaman ERP Logo">
+    <h1>Finaman ERP Demo Feedback Form</h1>
+    <p>
+      Thank you for attending the Finaman ERP Solution demo.<br>
+      Your feedback helps us improve and align the solution better with your business needs.
+    </p>
+  </div>
+
+  <!-- Form -->
+  <form id="feedbackForm">
+
+    <!-- 1. Basic Information -->
+    <div class="section">
+      <h2>1. Basic Information</h2>
+      <input type="text" placeholder="Company Name" required>
+      <input type="text" placeholder="Participant Name & Designation" required>
+      <input type="text" placeholder="Industry / Segment">
+    </div>
+
+    <!-- 2. Demo Experience -->
+    <div class="section">
+      <h2>2. Demo Experience</h2>
+
+      <label>Overall demo experience</label>
+      <div class="options">
+        <label><input type="radio" name="demo_exp" value="Excellent"> Excellent</label>
+        <label><input type="radio" name="demo_exp" value="Good"> Good</label>
+        <label><input type="radio" name="demo_exp" value="Average"> Average</label>
+        <label><input type="radio" name="demo_exp" value="Needs Improvement"> Needs Improvement</label>
+      </div>
+
+      <label>Relevance to business needs</label>
+      <div class="options">
+        <label><input type="radio" name="relevance" value="Very Relevant"> Very Relevant</label>
+        <label><input type="radio" name="relevance" value="Relevant"> Relevant</label>
+        <label><input type="radio" name="relevance" value="Partial"> Partial</label>
+        <label><input type="radio" name="relevance" value="Not Relevant"> Not Relevant</label>
+      </div>
+    </div>
+
+    <!-- 3. ERP Functionality -->
+    <div class="section">
+      <h2>3. ERP Functionality & Understanding</h2>
+
+      <label>Modules Demonstrated</label>
+      <div class="options grid">
+        <label><input type="checkbox" value="Finance & Accounts"> Finance & Accounts</label>
+        <label><input type="checkbox" value="Inventory"> Inventory</label>
+        <label><input type="checkbox" value="Manufacturing"> Manufacturing</label>
+        <label><input type="checkbox" value="Quality / Compliance"> Quality / Compliance</label>
+        <label><input type="checkbox" value="Sales & Distribution"> Sales & Distribution</label>
+        <label><input type="checkbox" value="Purchase / Vendor Management"> Purchase / Vendor Management</label>
+        <label><input type="checkbox" value="Reports & Dashboards"> Reports & Dashboards</label>
+      </div>
+
+      <label>Clarity of explanation</label>
+      <div class="options">
+        <label><input type="radio" name="clarity" value="Very Clear"> Very Clear</label>
+        <label><input type="radio" name="clarity" value="Clear"> Clear</label>
+        <label><input type="radio" name="clarity" value="Average"> Average</label>
+        <label><input type="radio" name="clarity" value="Not Clear"> Not Clear</label>
+      </div>
+    </div>
+
+    <!-- 4. ERP USP -->
+    <div class="section">
+      <h2>4. ERP USP & Value</h2>
+
+      <label>USPs clearly explained</label>
+      <div class="options">
+        <label><input type="radio" name="usp" value="Yes"> Yes</label>
+        <label><input type="radio" name="usp" value="Partially"> Partially</label>
+        <label><input type="radio" name="usp" value="No"> No</label>
+      </div>
+    </div>
+
+    <!-- 5. Decision -->
+    <div class="section">
+      <h2>5. Commercial & Decision Readiness</h2>
+
+      <label>Current decision stage</label>
+      <div class="options">
+        <label><input type="radio" name="stage" value="Exploring"> Exploring</label>
+        <label><input type="radio" name="stage" value="Shortlisting"> Shortlisting</label>
+        <label><input type="radio" name="stage" value="Final Evaluation"> Final Evaluation</label>
+        <label><input type="radio" name="stage" value="Ready for Commercial Discussion"> Ready for Commercial Discussion</label>
+      </div>
+    </div>
+
+    <!-- 6. Comments -->
+    <div class="section">
+      <h2>6. Comments & Suggestions</h2>
+      <textarea placeholder="What did you like most?"></textarea>
+      <textarea placeholder="What can be improved?"></textarea>
+      <textarea placeholder="Unaddressed requirements"></textarea>
+    </div>
+
+    <!-- 7. Rating -->
+    <div class="section">
+      <h2>7. Overall Rating</h2>
+      <div class="options">
+        <label><input type="radio" name="rating" value="1"> 1</label>
+        <label><input type="radio" name="rating" value="2"> 2</label>
+        <label><input type="radio" name="rating" value="3"> 3</label>
+        <label><input type="radio" name="rating" value="4"> 4</label>
+        <label><input type="radio" name="rating" value="5"> 5</label>
+      </div>
+    </div>
+
+    <button type="submit">Submit Feedback</button>
+
+  </form>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+document.getElementById("feedbackForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  fetch("https://script.google.com/macros/s/AKfycbzOdhzCuensvzF-SGvKxfjobrB6ECNGCwAHgfNqY_UK0STjJNhgtrolIUfmyhesxB7jRw/exec", {
+    method: "POST",
+    body: JSON.stringify({
+      company: document.querySelector('input[placeholder="Company Name"]').value,
+      name: document.querySelector('input[placeholder="Participant Name & Designation"]').value,
+      industry: document.querySelector('input[placeholder="Industry / Segment"]').value,
+      demo_exp: document.querySelector('input[name="demo_exp"]:checked')?.value,
+      relevance: document.querySelector('input[name="relevance"]:checked')?.value,
+      modules: Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(el => el.value).join(", "),
+      clarity: document.querySelector('input[name="clarity"]:checked')?.value,
+      usp: document.querySelector('input[name="usp"]:checked')?.value,
+      stage: document.querySelector('input[name="stage"]:checked')?.value,
+      comments: Array.from(document.querySelectorAll('textarea')).map(t => t.value).join(" | "),
+      rating: document.querySelector('input[name="rating"]:checked')?.value
+    })
+  })
+  .then(res => res.json())
+  .then(() => {
+    alert("Thank you! Your feedback has been submitted successfully.");
+    document.getElementById("feedbackForm").reset();
+  });
+});
+</script>
+
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
