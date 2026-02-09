@@ -142,13 +142,12 @@ button:hover {
   }
 }
 
-/* Mobile text fix */
-@media (max-width: 480px) {
-  .form-header p {
-    font-size: 13px;
-    line-height: 1.4;
-    padding: 0 8px;
+/@media (max-width: 480px) {
+  .form-header {
+    margin-bottom: 20px;
   }
+}
+
 
   .form-header h1 {
     font-size: 20px;
