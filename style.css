@@ -19,14 +19,14 @@ body {
   margin-bottom: 30px;
 }
 
-.form-header img {
-  max-width: 180px;
-  margin-bottom: 10px;
+.logo {
+  max-width: 200px;
+  margin-bottom: 12px;
 }
 
 .form-header h1 {
   color: #0b4a7a;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .form-header p {
@@ -43,33 +43,20 @@ body {
   color: #0b4a7a;
   border-left: 4px solid #0b4a7a;
   padding-left: 10px;
-  margin-bottom: 15px;
 }
 
-input[type="text"],
-textarea {
+input[type="text"] {
   width: 100%;
   padding: 12px;
   margin-top: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 14px;
-}
-
-textarea {
-  min-height: 90px;
-  resize: vertical;
 }
 
 .options label {
   display: inline-block;
   margin-right: 20px;
-  margin-top: 8px;
-  font-size: 14px;
-}
-
-.grid label {
-  width: 45%;
+  margin-top: 10px;
 }
 
 button {
@@ -88,9 +75,29 @@ button:hover {
   background: #083a61;
 }
 
+/* Footer */
+.footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+}
+
+.social-links a {
+  margin: 0 12px;
+  color: #0b4a7a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
 /* Mobile */
 @media (max-width: 600px) {
-  .grid label {
-    width: 100%;
+  .logo {
+    max-width: 160px;
   }
 }
