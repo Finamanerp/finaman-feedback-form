@@ -69,6 +69,11 @@ body {
   margin-bottom: 6px;
   color: #0b4a7a;
 }
+/* Main titles color */
+.form-header h1,
+.section h2 {
+  color: #000000;
+}
 
 /* INPUTS */
 input[type="text"],
