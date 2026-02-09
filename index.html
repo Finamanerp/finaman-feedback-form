@@ -109,17 +109,29 @@
       </div>
     </div>
 
-    <!-- 6. Comments -->
+    <!-- 6. Next Steps -->
+<div class="section">
+  <h2>6. What would you like to do next?</h2>
+  <div class="options">
+    <label><input type="checkbox" name="next_steps" value="Detailed / Role-based Demo"> Detailed / Role-based Demo</label>
+    <label><input type="checkbox" name="next_steps" value="Commercial Proposal"> Commercial Proposal</label>
+    <label><input type="checkbox" name="next_steps" value="Management-Level Demo"> Management-Level Demo</label>
+    <label><input type="checkbox" name="next_steps" value="Onsite Meeting for final process"> Onsite Meeting for final process</label>
+    <label><input type="checkbox" name="next_steps" value="No Further Action"> No Further Action</label>
+  </div>
+</div>
+
+    <!-- 7. Comments -->
     <div class="section">
-      <h2>6. Comments & Suggestions</h2>
+      <h2>7. Comments & Suggestions</h2>
       <textarea placeholder="What did you like most?"></textarea>
       <textarea placeholder="What can be improved?"></textarea>
       <textarea placeholder="Unaddressed requirements"></textarea>
     </div>
 
-    <!-- 7. Rating -->
+    <!-- 8. Rating -->
     <div class="section">
-      <h2>7. Overall Rating</h2>
+      <h2>8. Overall Rating</h2>
       <div class="options">
         <label><input type="radio" name="rating" value="1"> 1</label>
         <label><input type="radio" name="rating" value="2"> 2</label>
@@ -165,11 +177,23 @@ document.getElementById("feedbackForm").addEventListener("submit", function(e) {
       industry: document.querySelector('input[placeholder="Industry / Segment"]').value,
       demo_exp: document.querySelector('input[name="demo_exp"]:checked')?.value,
       relevance: document.querySelector('input[name="relevance"]:checked')?.value,
-      modules: Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(el => el.value).join(", "),
+
+      /* Modules (Section 3) */
+      modules: Array.from(
+        document.querySelectorAll('.grid input[type="checkbox"]:checked')
+      ).map(el => el.value).join(", "),
+
       clarity: document.querySelector('input[name="clarity"]:checked')?.value,
       usp: document.querySelector('input[name="usp"]:checked')?.value,
       stage: document.querySelector('input[name="stage"]:checked')?.value,
-      comments: Array.from(document.querySelectorAll('textarea')).map(t => t.value).join(" | "),
+
+      /* Section 6 – What would you like to do next? */
+      next_steps: Array.from(
+        document.querySelectorAll('input[name="next_steps"]:checked')
+      ).map(el => el.value).join(", "),
+
+      comments: Array.from(document.querySelectorAll('textarea'))
+        .map(t => t.value).join(" | "),
       rating: document.querySelector('input[name="rating"]:checked')?.value
     })
   })
