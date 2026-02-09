@@ -217,7 +217,13 @@ document.getElementById("feedbackForm").addEventListener("submit", function(e) {
 
       clarity: document.querySelector('input[name="clarity"]:checked')?.value,
       usp: document.querySelector('input[name="usp"]:checked')?.value,
+
+      /* Section 5 – Commercial & Decision Readiness */
+      commercial_discussion: document.querySelector('input[name="commercial_discussion"]:checked')?.value,
+      cost_value: document.querySelector('input[name="cost_value"]:checked')?.value,
       stage: document.querySelector('input[name="stage"]:checked')?.value,
+      authority: document.querySelector('input[name="authority"]:checked')?.value,
+      timeline: document.querySelector('input[name="timeline"]:checked')?.value,
 
       /* Section 6 – What would you like to do next? */
       next_steps: Array.from(
