@@ -1,195 +1,57 @@
-/* RESET */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* BODY */
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f4f6f8;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f9;
   padding: 20px;
   color: #333;
 }
 
-/* MAIN CARD */
 .form-wrapper {
   max-width: 900px;
   margin: auto;
-  background: #ffffff;
+  background: #fff;
   padding: 32px;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-/* HEADER */
-.form-header {
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.logo {
-  max-width: 190px;
-  margin-bottom: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
 }
 
 .form-header h1 {
-  font-size: 20px;
-  font-weight: 700;
   color: #0b4a7a;
-  margin-bottom: 8px;
-}
-
-.form-header p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.5;
-}
-
-/* SECTIONS */
-.section {
-  margin-top: 32px;
+  font-size: 22px;
 }
 
 .section h2 {
-  font-size: 18px;
-  font-weight: 600;
   color: #0b4a7a;
+  font-size: 18px;
+  margin-bottom: 14px;
   border-left: 4px solid #0b4a7a;
   padding-left: 10px;
-  margin-bottom: 16px;
 }
 
-/* Bold question labels */
-.section > label {
-  font-weight: 600;
-  display: block;
-  margin-top: 18px;
-  margin-bottom: 6px;
-  color: #0b4a7a;
-}
-/* Main titles color */
-.form-header h1,
-.section h2 {
-  color: #000000;
-}
-
-/* INPUTS */
-input[type="text"],
-textarea {
+input, textarea {
   width: 100%;
-  padding: 12px 14px;
+  padding: 12px;
+  font-size: 15px;
   margin-bottom: 12px;
-  border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 14px;
-  transition: border-color 0.2s ease;
-}
-
-input[type="text"]:focus,
-textarea:focus {
-  outline: none;
-  border-color: #0b4a7a;
-}
-
-/* TEXTAREA */
-textarea {
-  min-height: 90px;
-  resize: vertical;
-}
-
-/* OPTIONS (RADIO / CHECKBOX) */
-.options {
-  margin-top: 6px;
+  border: 1px solid #ccc;
 }
 
 .options label {
-  display: inline-flex;
-  align-items: center;
-  margin-right: 18px;
-  margin-bottom: 10px;
-  font-size: 14px;
-  cursor: pointer;
+  display: inline-block;
+  margin-right: 16px;
+  font-size: 15px;
 }
 
-.options input {
-  margin-right: 6px;
-}
-
-/* GRID FOR CHECKBOXES */
-.options.grid label {
-  width: 45%;
-}
-
-/* BUTTON */
 button {
-  margin-top: 32px;
-  width: 100%;
-  padding: 15px;
   background: #0b4a7a;
-  color: #ffffff;
+  color: #fff;
+  padding: 14px;
   font-size: 16px;
-  font-weight: 600;
-  border: none;
   border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s ease;
+  border: none;
+  width: 100%;
 }
 
-button:hover {
-  background: #083a61;
-}
-
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-  .form-wrapper {
-    padding: 22px;
-  }
-
-  .form-header h1 {
-    font-size: 20px;
-  }
-
-  .options.grid label {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    padding: 12px;
-  }
-
-  .logo {
-    max-width: 160px;
-  }
-
-  .form-header h1 {
-    font-size: 16px;
-  }
-}
-/* FOOTER */
-.footer {
-  margin-top: 40px;
-  padding-top: 18px;
-  border-top: 1px solid #ddd;
-  text-align: center;
-  font-size: 14px;
-  color: #555;
-}
-
-.footer p {
-  margin-bottom: 10px;
-}
-
-.social-links a {
-  margin: 0 12px;
-  color: #0b4a7a;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.social-links a:hover {
-  text-decoration: underline;
+@media(max-width:768px){
+  .options label { display:block; }
 }
