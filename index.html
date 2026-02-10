@@ -1,247 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Finaman ERP Demo Feedback</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="./style.css">
-
-  <!-- Open Graph / WhatsApp Preview -->
-  <meta property="og:title" content="Finaman ERP Demo Feedback Form">
-  <meta property="og:description" content="Please share your feedback after attending the Finaman ERP demo. Your inputs help us align the solution better with your business needs.">
-  <meta property="og:image" content="https://finamanerp.github.io/finaman-feedback-form/preview.png">
-  <meta property="og:url" content="https://finamanerp.github.io/finaman-feedback-form/">
-  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
 <div class="form-wrapper">
 
-  <!-- Header -->
   <div class="form-header">
-    <img src="logo.png" alt="Finaman ERP Logo" class="logo">
-
-    <h1>Finaman ERP Demo Feedback Form</h1>
-    <p>
-      Thank you for attending the Finaman ERP Solution demo.<br>
-      Your feedback helps us improve and align the solution better with your business needs.
-    </p>
+    <img src="logo.png" class="logo" alt="Finaman ERP">
+    <h1>FINAMAN ERP – Online Demo Feedback</h1>
+    <p>Your feedback helps us align the ERP better with your business needs.</p>
   </div>
 
-  <!-- Form -->
-  <form id="feedbackForm">
+<form id="feedbackForm">
 
-    <!-- 1. Basic Information -->
-    <div class="section">
-      <h2>1. Basic Information</h2>
-      <input type="text" placeholder="Company Name" required>
-      <input type="text" placeholder="Participant Name & Designation" required>
-      <input type="text" placeholder="Industry / Segment">
-    </div>
-
-    <!-- 2. Demo Experience -->
-    <div class="section">
-      <h2>2. Demo Experience</h2>
-
-      <label>Overall demo experience</label>
-      <div class="options">
-        <label><input type="radio" name="demo_exp" value="Excellent"> Excellent</label>
-        <label><input type="radio" name="demo_exp" value="Good"> Good</label>
-        <label><input type="radio" name="demo_exp" value="Average"> Average</label>
-        <label><input type="radio" name="demo_exp" value="Needs Improvement"> Needs Improvement</label>
-      </div>
-
-      <label>Relevance to business needs</label>
-      <div class="options">
-        <label><input type="radio" name="relevance" value="Very Relevant"> Very Relevant</label>
-        <label><input type="radio" name="relevance" value="Relevant"> Relevant</label>
-        <label><input type="radio" name="relevance" value="Partial"> Partial</label>
-        <label><input type="radio" name="relevance" value="Not Relevant"> Not Relevant</label>
-      </div>
-    </div>
-
-    <!-- 3. ERP Functionality -->
-    <div class="section">
-      <h2>3. ERP Functionality & Understanding</h2>
-
-      <label>Modules Demonstrated</label>
-      <div class="options grid">
-        <label><input type="checkbox" value="Finance & Accounts"> Finance & Accounts</label>
-        <label><input type="checkbox" value="Inventory"> Inventory</label>
-        <label><input type="checkbox" value="Manufacturing"> Manufacturing</label>
-        <label><input type="checkbox" value="Quality / Compliance"> Quality / Compliance</label>
-        <label><input type="checkbox" value="Sales & Distribution"> Sales & Distribution</label>
-        <label><input type="checkbox" value="Purchase / Vendor Management"> Purchase / Vendor Management</label>
-        <label><input type="checkbox" value="Reports & Dashboards"> Reports & Dashboards</label>
-      </div>
-
-      <label>Clarity of explanation</label>
-      <div class="options">
-        <label><input type="radio" name="clarity" value="Very Clear"> Very Clear</label>
-        <label><input type="radio" name="clarity" value="Clear"> Clear</label>
-        <label><input type="radio" name="clarity" value="Average"> Average</label>
-        <label><input type="radio" name="clarity" value="Not Clear"> Not Clear</label>
-      </div>
-    </div>
-
-    <!-- 4. ERP USP -->
-    <div class="section">
-      <h2>4. ERP USP & Value</h2>
-      <div class="options">
-        <label><input type="radio" name="usp" value="Yes"> Yes</label>
-        <label><input type="radio" name="usp" value="Partially"> Partially</label>
-        <label><input type="radio" name="usp" value="No"> No</label>
-      </div>
-    </div>
-
-    <!-- 5. Commercial & Decision Readiness -->
+<!-- 1. BASIC INFORMATION -->
 <div class="section">
-  <h2>5. Commercial & Decision Readiness</h2>
-
-  <label>Was there a commercial discussion done?</label>
-  <div class="options">
-    <label><input type="radio" name="commercial_discussion" value="Yes"> Yes</label>
-    <label><input type="radio" name="commercial_discussion" value="No"> No</label>
-  </div>
-
-  <label>How suitable do you find the ERP in terms of cost vs value?</label>
-  <div class="options">
-    <label><input type="radio" name="cost_value" value="Very Suitable"> Very Suitable</label>
-    <label><input type="radio" name="cost_value" value="Suitable"> Suitable</label>
-    <label><input type="radio" name="cost_value" value="Needs Review"> Needs Review</label>
-    <label><input type="radio" name="cost_value" value="Not Suitable"> Not Suitable</label>
-  </div>
-
-  <label>What is your current stage of decision making?</label>
-  <div class="options">
-    <label><input type="radio" name="stage" value="Exploring"> Exploring</label>
-    <label><input type="radio" name="stage" value="Shortlisting"> Shortlisting</label>
-    <label><input type="radio" name="stage" value="Final Evaluation"> Final Evaluation</label>
-    <label><input type="radio" name="stage" value="Ready for Commercial Discussion"> Ready for Commercial Discussion</label>
-  </div>
-
-  <label>Authority level of attendee</label>
-  <div class="options">
-    <label><input type="radio" name="authority" value="Decision Maker"> Decision Maker</label>
-    <label><input type="radio" name="authority" value="Influencer"> Influencer</label>
-    <label><input type="radio" name="authority" value="User"> User</label>
-  </div>
-
-  <label>Expected timeline</label>
-  <div class="options">
-    <label><input type="radio" name="timeline" value="Immediate"> Immediate</label>
-    <label><input type="radio" name="timeline" value="< 1 Month"> &lt; 1 Month</label>
-    <label><input type="radio" name="timeline" value="1–3 Months"> 1–3 Months</label>
-    <label><input type="radio" name="timeline" value="> 3 Months"> &gt; 3 Months</label>
-  </div>
+<h2>1. Basic Information</h2>
+<input type="text" name="company_name" placeholder="Company Name" required>
+<input type="text" name="participant" placeholder="Participant Name & Designation" required>
+<input type="text" name="industry" placeholder="Industry / Segment">
+<input type="date" name="demo_date">
 </div>
 
-
-    <!-- 6. Next Steps -->
+<!-- 2. DEMO EXPERIENCE -->
 <div class="section">
-  <h2>6. What would you like to do next?</h2>
-  <div class="options">
-    <label><input type="checkbox" name="next_steps" value="Detailed / Role-based Demo"> Detailed / Role-based Demo</label>
-    <label><input type="checkbox" name="next_steps" value="Commercial Proposal"> Commercial Proposal</label>
-    <label><input type="checkbox" name="next_steps" value="Management-Level Demo"> Management-Level Demo</label>
-    <label><input type="checkbox" name="next_steps" value="Onsite Meeting for final process"> Onsite Meeting for final process</label>
-    <label><input type="checkbox" name="next_steps" value="No Further Action"> No Further Action</label>
-  </div>
+<h2>2. Demo Experience</h2>
+
+<label>Overall demo experience</label>
+<div class="options">
+<label><input type="radio" name="demo_experience" value="Excellent"> Excellent</label>
+<label><input type="radio" name="demo_experience" value="Good"> Good</label>
+<label><input type="radio" name="demo_experience" value="Average"> Average</label>
+<label><input type="radio" name="demo_experience" value="Needs Improvement"> Needs Improvement</label>
 </div>
 
-    <!-- 7. Comments -->
-    <div class="section">
-      <h2>7. Comments & Suggestions</h2>
-      <textarea placeholder="What did you like most?"></textarea>
-      <textarea placeholder="What can be improved?"></textarea>
-      <textarea placeholder="Unaddressed requirements"></textarea>
-    </div>
-
-    <!-- 8. Rating -->
-    <div class="section">
-      <h2>8. Overall Rating</h2>
-      <div class="options">
-        <label><input type="radio" name="rating" value="1"> 1</label>
-        <label><input type="radio" name="rating" value="2"> 2</label>
-        <label><input type="radio" name="rating" value="3"> 3</label>
-        <label><input type="radio" name="rating" value="4"> 4</label>
-        <label><input type="radio" name="rating" value="5"> 5</label>
-      </div>
-    </div>
-
-    <button type="submit">Submit Feedback</button>
-
-  </form>
-
+<label>Relevance to business needs</label>
+<div class="options">
+<label><input type="radio" name="relevance" value="Very Relevant"> Very Relevant</label>
+<label><input type="radio" name="relevance" value="Relevant"> Relevant</label>
+<label><input type="radio" name="relevance" value="Partial"> Partial</label>
+<label><input type="radio" name="relevance" value="Not Relevant"> Not Relevant</label>
 </div>
-<footer class="footer">
-  <p>© Logix Infotech LLP</p>
 
-  <div class="social-links">
-    <a href="https://www.linkedin.com/company/logixinfotechllp/?originalSubdomain=in" target="_blank" rel="noopener">
-      LinkedIn
-    </a>
+<label>Demo duration</label>
+<div class="options">
+<label><input type="radio" name="demo_duration" value="Too Long"> Too Long</label>
+<label><input type="radio" name="demo_duration" value="Appropriate"> Appropriate</label>
+<label><input type="radio" name="demo_duration" value="Too Short"> Too Short</label>
+</div>
+</div>
 
-    <a href="https://www.youtube.com/@LogixInfotech-ERP/videos?app=desktop&view=0&sort=dd&shelf_id=2" target="_blank" rel="noopener">
-      YouTube
-    </a>
+<!-- 3. ERP FUNCTIONALITY -->
+<div class="section">
+<h2>3. ERP Functionality & Understanding</h2>
 
-    <a href="https://www.facebook.com/logixinfotech.in/" target="_blank" rel="noopener">
-      Facebook
-    </a>
-  </div>
-</footer>
+<label>Modules demonstrated</label>
+<div class="options grid">
+<label><input type="checkbox" value="Finance & Accounts"> Finance & Accounts</label>
+<label><input type="checkbox" value="Inventory"> Inventory</label>
+<label><input type="checkbox" value="Manufacturing"> Manufacturing</label>
+<label><input type="checkbox" value="Quality / Compliance"> Quality / Compliance</label>
+<label><input type="checkbox" value="Sales & Distribution"> Sales & Distribution</label>
+<label><input type="checkbox" value="Purchase / Vendor Management"> Purchase / Vendor Management</label>
+<label><input type="checkbox" value="Reports & Dashboards"> Reports & Dashboards</label>
+</div>
 
-<!-- Script -->
-<script>
-document.getElementById("feedbackForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+<label>Clarity of explanation</label>
+<div class="options">
+<label><input type="radio" name="clarity" value="Very Clear"> Very Clear</label>
+<label><input type="radio" name="clarity" value="Clear"> Clear</label>
+<label><input type="radio" name="clarity" value="Average"> Average</label>
+<label><input type="radio" name="clarity" value="Not Clear"> Not Clear</label>
+</div>
 
-  fetch("https://script.google.com/macros/s/AKfycbzOdhzCuensvzF-SGvKxfjobrB6ECNGCwAHgfNqY_UK0STjJNhgtrolIUfmyhesxB7jRw/exec", {
-    method: "POST",
-    body: JSON.stringify({
-      company: document.querySelector('input[placeholder="Company Name"]').value,
-      name: document.querySelector('input[placeholder="Participant Name & Designation"]').value,
-      industry: document.querySelector('input[placeholder="Industry / Segment"]').value,
-      demo_exp: document.querySelector('input[name="demo_exp"]:checked')?.value,
-      relevance: document.querySelector('input[name="relevance"]:checked')?.value,
+<label>ERP addressed key challenges</label>
+<div class="options">
+<label><input type="radio" name="key_challenges" value="Yes"> Yes</label>
+<label><input type="radio" name="key_challenges" value="Partially"> Partially</label>
+<label><input type="radio" name="key_challenges" value="No"> No</label>
+</div>
+</div>
 
-      /* Modules (Section 3) */
-      modules: Array.from(
-        document.querySelectorAll('.grid input[type="checkbox"]:checked')
-      ).map(el => el.value).join(", "),
+<!-- 4. ERP USP -->
+<div class="section">
+<h2>4. ERP USP & Value</h2>
 
-      clarity: document.querySelector('input[name="clarity"]:checked')?.value,
-      usp: document.querySelector('input[name="usp"]:checked')?.value,
+<label>USPs clearly explained</label>
+<div class="options">
+<label><input type="radio" name="usp" value="Yes"> Yes</label>
+<label><input type="radio" name="usp" value="Partially"> Partially</label>
+<label><input type="radio" name="usp" value="No"> No</label>
+</div>
 
-      /* Section 5 – Commercial & Decision Readiness */
-      commercial_discussion: document.querySelector('input[name="commercial_discussion"]:checked')?.value,
-      cost_value: document.querySelector('input[name="cost_value"]:checked')?.value,
-      stage: document.querySelector('input[name="stage"]:checked')?.value,
-      authority: document.querySelector('input[name="authority"]:checked')?.value,
-      timeline: document.querySelector('input[name="timeline"]:checked')?.value,
+<label>Comparison with current / other ERP</label>
+<div class="options">
+<label><input type="radio" name="comparison" value="Much Better"> Much Better</label>
+<label><input type="radio" name="comparison" value="Better"> Better</label>
+<label><input type="radio" name="comparison" value="Similar"> Similar</label>
+<label><input type="radio" name="comparison" value="Below Expectation"> Below Expectation</label>
+</div>
+</div>
 
-      /* Section 6 – What would you like to do next? */
-      next_steps: Array.from(
-        document.querySelectorAll('input[name="next_steps"]:checked')
-      ).map(el => el.value).join(", "),
+<!-- 5. COMMERCIAL -->
+<div class="section">
+<h2>5. Commercial & Decision Readiness</h2>
 
-      comments: Array.from(document.querySelectorAll('textarea'))
-        .map(t => t.value).join(" | "),
-      rating: document.querySelector('input[name="rating"]:checked')?.value
-    })
-  })
-  .then(res => res.json())
-  .then(() => {
-    alert("Thank you! Your feedback has been submitted successfully.");
-    document.getElementById("feedbackForm").reset();
-  });
-});
-</script>
+<label>Commercial discussion done?</label>
+<div class="options">
+<label><input type="radio" name="commercial" value="Yes"> Yes</label>
+<label><input type="radio" name="commercial" value="No"> No</label>
+</div>
 
+<label>Cost vs Value suitability</label>
+<div class="options">
+<label><input type="radio" name="cost_value" value="Very Suitable"> Very Suitable</label>
+<label><input type="radio" name="cost_value" value="Suitable"> Suitable</label>
+<label><input type="radio" name="cost_value" value="Needs Review"> Needs Review</label>
+<label><input type="radio" name="cost_value" value="Not Suitable"> Not Suitable</label>
+</div>
+
+<label>Decision stage</label>
+<div class="options">
+<label><input type="radio" name="decision_stage" value="Exploring"> Exploring</label>
+<label><input type="radio" name="decision_stage" value="Shortlisting"> Shortlisting</label>
+<label><input type="radio" name="decision_stage" value="Final Evaluation"> Final Evaluation</label>
+<label><input type="radio" name="decision_stage" value="Ready"> Ready for Commercial</label>
+</div>
+
+<label>Authority level</label>
+<div class="options">
+<label><input type="radio" name="authority" value="Decision Maker"> Decision Maker</label>
+<label><input type="radio" name="authority" value="Influencer"> Influencer</label>
+<label><input type="radio" name="authority" value="User"> User</label>
+</div>
+
+<label>Expected timeline</label>
+<div class="options">
+<label><input type="radio" name="timeline" value="Immediate"> Immediate</label>
+<label><input type="radio" name="timeline" value="<1 Month"> &lt;1 Month</label>
+<label><input type="radio" name="timeline" value="1–3 Months"> 1–3 Months</label>
+<label><input type="radio" name="timeline" value=">3 Months"> &gt;3 Months</label>
+</div>
+</div>
+
+<!-- 6. NEXT STEPS -->
+<div class="section">
+<h2>6. Next Steps</h2>
+<div class="options">
+<label><input type="checkbox" value="Detailed Demo"> Detailed / Role-based Demo</label>
+<label><input type="checkbox" value="Commercial Proposal"> Commercial Proposal</label>
+<label><input type="checkbox" value="Management Demo"> Management-Level Demo</label>
+<label><input type="checkbox" value="Onsite Meeting"> Onsite Meeting</label>
+<label><input type="checkbox" value="No Action"> No Further Action</label>
+</div>
+</div>
+
+<!-- 7. COMMENTS -->
+<div class="section">
+<h2>7. Comments & Suggestions</h2>
+<textarea name="likes" placeholder="What did you like most?"></textarea>
+<textarea name="improvements" placeholder="What can be improved?"></textarea>
+<textarea name="unaddressed" placeholder="Unaddressed requirements"></textarea>
+</div>
+
+<!-- 8. RATING -->
+<div class="section">
+<h2>8. Recommendation Likelihood (1–5)</h2>
+<div class="options">
+<label><input type="radio" name="rating" value="1"> 1</label>
+<label><input type="radio" name="rating" value="2"> 2</label>
+<label><input type="radio" name="rating" value="3"> 3</label>
+<label><input type="radio" name="rating" value="4"> 4</label>
+<label><input type="radio" name="rating" value="5"> 5</label>
+</div>
+</div>
+
+<button type="submit">Submit Feedback</button>
+
+</form>
+</div>
 </body>
 </html>
