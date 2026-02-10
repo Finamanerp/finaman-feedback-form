@@ -204,63 +204,26 @@
 </footer>
   
 <script>
-document.getElementById("feedbackForm").addEventListener("submit", function (e) {
+document.getElementById("feedbackForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  const data = {
-    company_name: document.querySelector('[name="company_name"]').value,
-    participant: document.querySelector('[name="participant"]').value,
-    industry: document.querySelector('[name="industry"]').value,
-    demo_date: document.querySelector('[name="demo_date"]').value,
-
-    demo_experience: document.querySelector('input[name="demo_experience"]:checked')?.value || "",
-    relevance: document.querySelector('input[name="relevance"]:checked')?.value || "",
-    demo_duration: document.querySelector('input[name="demo_duration"]:checked')?.value || "",
-
-    modules: Array.from(
-      document.querySelectorAll('.options.grid input[type="checkbox"]:checked')
-    ).map(el => el.value).join(", "),
-
-    clarity: document.querySelector('input[name="clarity"]:checked')?.value || "",
-    key_challenges: document.querySelector('input[name="key_challenges"]:checked')?.value || "",
-
-    usp: document.querySelector('input[name="usp"]:checked')?.value || "",
-    comparison: document.querySelector('input[name="comparison"]:checked')?.value || "",
-
-    commercial: document.querySelector('input[name="commercial"]:checked')?.value || "",
-    cost_value: document.querySelector('input[name="cost_value"]:checked')?.value || "",
-    decision_stage: document.querySelector('input[name="decision_stage"]:checked')?.value || "",
-    authority: document.querySelector('input[name="authority"]:checked')?.value || "",
-    timeline: document.querySelector('input[name="timeline"]:checked')?.value || "",
-
-    next_steps: Array.from(
-      document.querySelectorAll('input[type="checkbox"]:checked')
-    ).map(el => el.value).join(", "),
-
-    likes: document.querySelector('[name="likes"]').value,
-    improvements: document.querySelector('[name="improvements"]').value,
-    unaddressed: document.querySelector('[name="unaddressed"]').value,
-
-    rating: document.querySelector('input[name="rating"]:checked')?.value || ""
-  };
+  const form = e.target;
+  const formData = new FormData(form);
 
   fetch("https://script.google.com/macros/s/AKfycbyzZVNRrQFxQgD-YhpubLAwNqiCQNOC4yMDaRfPR87WqQq1-GF_IdC29v9h5aXmuvMzJA/exec", {
     method: "POST",
-    mode: "no-cors",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
+    body: formData
   })
   .then(() => {
     alert("✅ Thank you! Your feedback has been submitted successfully.");
-    document.getElementById("feedbackForm").reset();
+    form.reset();
   })
   .catch(err => {
-    alert("❌ Submission failed. Please try again.");
     console.error(err);
+    alert("❌ Submission failed. Please try again.");
   });
 });
 </script>
+
 </body>
 </html>
