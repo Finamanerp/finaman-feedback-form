@@ -213,17 +213,14 @@ document.getElementById("feedbackForm").addEventListener("submit", function(e) {
   fetch("https://script.google.com/macros/s/AKfycbyzZVNRrQFxQgD-YhpubLAwNqiCQNOC4yMDaRfPR87WqQq1-GF_IdC29v9h5aXmuvMzJA/exec", {
     method: "POST",
     body: formData
-  })
-  .then(() => {
-    alert("✅ Thank you! Your feedback has been submitted successfully.");
-    form.reset();
-  })
-  .catch(err => {
-    console.error(err);
-    alert("❌ Submission failed. Please try again.");
   });
+
+  /* 🔥 DO NOT WAIT FOR RESPONSE (mobile-safe) */
+  alert("✅ Thank you! Your feedback has been submitted successfully.");
+  form.reset();
 });
 </script>
+
 
 </body>
 </html>
