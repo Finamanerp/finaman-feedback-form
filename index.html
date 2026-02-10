@@ -196,13 +196,11 @@
 <iframe name="hidden_iframe" style="display:none;"></iframe>
 
 <script>
-document.getElementById("feedbackForm").addEventListener("submit", function () {
-  setTimeout(() => {
-    alert("✅ Thank you! Your feedback has been submitted successfully.");
-    document.getElementById("feedbackForm").reset();
-  }, 600);
-});
+document.getElementById("feedbackForm").onsubmit = function () {
+  alert("✅ Thank you! Your feedback has been submitted successfully.");
+};
 </script>
+
 
 </body>
 </html>
